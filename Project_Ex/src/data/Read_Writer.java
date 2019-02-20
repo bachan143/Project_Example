@@ -1,8 +1,7 @@
 package data;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,15 +9,18 @@ import java.util.Scanner;
 
 public class Read_Writer
 {
+
 	
 	Scanner scanner = null;
 	String line=null;
 	Scanner scanner1=null;
 	int index=0;
 	Data_Detalis det;
+	
+	
 
 	List<Data_Detalis> detalis=new ArrayList<Data_Detalis>();
-	public void readWriter()
+	public void readCsvFile()
 	{
 	
 	    try
@@ -59,8 +61,8 @@ public class Read_Writer
 			detalis.add(det);
 			
 		}
-		System.out.println("================");
-		System.out.println(detalis);
+		
+		
 		
 		
 	}
@@ -72,14 +74,38 @@ public class Read_Writer
 	{
 		try
 		{
-			if (scanner != null) scanner.close();
+			if(scanner != null)scanner.close();
 		} 
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
+	 }
+   }
+	public void serach_Particular_Event_Id()
+	{
+		List<Data_Detalis> detalist2=detalis;
+		System.out.println("input the Eventid");
+		Scanner sc=new Scanner(System.in);
+		int eventId=sc.nextInt();
+		for(Data_Detalis detalis1:detalist2)
+		{
+			//System.out.println(detalis1);
+			//System.out.println(det.getEvent_Id());
+	
+		    if(det.getEvent_Id()==eventId)
+		  {
+		    	
+			System.out.println("================"); 
+			System.out.println(detalis1);
+		   }
+		sc.close();
+		
+		}
+		
+		
 	}
-}
+	
 }
 
 
