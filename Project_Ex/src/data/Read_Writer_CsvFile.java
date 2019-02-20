@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Read_Writer
+public class Read_Writer_CsvFile
 {
 
 	
@@ -91,7 +91,7 @@ public class Read_Writer
 		for(Data_Detalis detalis1:detalist2)
 		{
 			//System.out.println(detalis1);
-			//System.out.println(det.getEvent_Id());
+			System.out.println(det.getEvent_Id());
 	
 		    if(det.getEvent_Id()==eventId)
 		  {
