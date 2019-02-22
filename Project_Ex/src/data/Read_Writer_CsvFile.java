@@ -85,15 +85,14 @@ public class Read_Writer_CsvFile
 	public void serach_Particular_Event_Id()
 	{
 		List<Data_Detalis> detalist2=detalis;
+	
 		System.out.println("input the Eventid");
 		Scanner sc=new Scanner(System.in);
 		int eventId=sc.nextInt();
 		for(Data_Detalis detalis1:detalist2)
 		{
-			//System.out.println(detalis1);
-			System.out.println(det.getEvent_Id());
-	
-		    if(det.getEvent_Id()==eventId)
+			
+		    if(detalis1.getEvent_Id()==eventId)
 		  {
 		    	
 			System.out.println("================"); 

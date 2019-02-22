@@ -63,7 +63,7 @@ public class Data_Detalis
 		return task_category;
 	}
 
-	@Override
+	
 	public String toString() {
 		return "\nData_Detalis [label=" + getLabel() + ", date=" +getDate() + ","
 				+ " time=" + getTime() + ", sourse=" + getSourse()
